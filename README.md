@@ -20,6 +20,12 @@ This project allows a user to give layout instructions through a chat interface,
 Based on the instruction, the application updates the design JSON and displays the updated JSON in the UI.
 
 ---
+## Approach 
+I built a chat-based layout agent using React for the frontend and Node.js with Express for the backend. The frontend stores the current design layout JSON in React state and sends both the user instruction and the latest JSON to the backend whenever the user submits a command.
+
+The backend processes the instruction and updates only layout-related properties such as x, y, width, height, nx, ny, nw, nh, fontSize, fontSizeRatio, and artboard dimensions. Important design elements like the headline, product image, offer badge, and artboard are identified using their node IDs.
+
+The updated JSON is returned to the frontend and displayed in the UI. Since every new command uses the latest JSON, the app supports follow-up instructions such as moving the headline first and then making it smaller. I also added a basic wireframe preview to visually show the layout changes, while keeping the updated JSON as the main output.
 
 ## Features
 
