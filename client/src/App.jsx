@@ -28,7 +28,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/layout/update", {
+      const res = await axios.post("https://chat-based-layout-agent-5u49.onrender.com/api/layout/update", {
         instruction: input,
         currentJson: layoutJson,
       });
